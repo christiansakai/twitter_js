@@ -6,3 +6,53 @@ body {
 a {
   color: #00B7FF;
 }
+
+a:hover {
+  text-decoration: none;
+}
+.tweetbox {
+  display: table;
+}
+
+.tweetbox-img {
+  display: table-cell;
+  padding-right: 10px;
+  padding-top: 12px;
+  vertical-align: top;
+}
+
+.tweetbox-text {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.content {
+  margin-left: 60px;
+}
+
+.content .by {
+  font-weight: bold;
+}
+
+.lead > b {
+  font-size: 1.5em;
+}
+
+#your-name {
+  font-size: 1.2em;
+}
+
+#footer .container {
+  height: 60px;
+  background-color: #F5F8F8;
+  display: table;
+}
+
+#footer .container p {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+#profile {
+  padding-bottom: 20px;
+}

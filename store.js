@@ -6,14 +6,21 @@ var store = function() {
 
   return {
     push: function(name, text) {
-      'name': name,
-      'text': text
+      var id = getFakeTweetId();
+
+      data.push({
+        'name': name,
+        'text': text,
+        'id': id
+      });
     },
     list: function() {
       return data;
     },
     find: function(properties) {
+      console.log('finding');
       return _.where(data, properties);
+
     }
   };
 }();
@@ -36,8 +43,12 @@ var getFakeTweet = function() {
   return "Fullstack Academy is " + randArrayEl(awesome_adj) + "! The instructors are just so " + randArrayEl(awesome_adj) + ". #fullstacklove #codedreams";
 };
 
+var getFakeTweetId = function() {
+  return Math.floor(Math.random() * 100);
+};
+
 var putFakeDataToStore = function() {
-  for(var i=0; i<10; i++) {
+  for(var i = 0; i < 10; i++) {
     store.push(getFakeName(), getFakeTweet());
   }
 };
