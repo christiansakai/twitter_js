@@ -7,7 +7,7 @@ A small version of twitter
 * Socket.io ==> to push realtime update
 
 #####Node
-######Express app generator
+#####Express app generator
 * Express
 * Static Favicon
 * Morgan
