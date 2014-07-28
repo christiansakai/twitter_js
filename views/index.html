@@ -1,0 +1,56 @@
+{% extends "layout.html" %} {% block content %}
+<div class="page-header">
+  <h1>Welcome to Twitter.js, User!</h1>
+</div>
+<div class="row">
+  <div class="col-md-3" id='profile'>
+    <img class='img-rounded' src="http://lorempixel.com/100/100" alt="User's Picture">
+    <p id='your-name'><b>User Name</b>
+    </p>
+    <p>100 followers</p>
+    <hr>
+    {% if show_form %}
+    <form action="/submit" method="post">
+      <div class="form-group">
+        <label for="name-field">Name</label>
+        <input type="text" name="name" id="name-field" value="{{ name }}"class="form-control" required></input>
+      </div>
+      <div class="form-group">
+        <label for="text-field">Text</label>
+        <input type="text" name="text" id="text-field" class="form-control" required></input>
+      </div>
+      <input type='submit' class='btn btn-primary' value='Tweet'></button>
+    </form>
+    {% endif %}
+  </div>
+  <div class="col-md-9">
+    <b class='lead'>{{ title }} </b>
+    {% if alertMessage %}
+    <span class='text-success'>--------- {{ alertMessage }} ----------</span>
+    {% endif %}
+    <!-- display tweets here -->
+    <ul class='list-unstyled' id='list-of-tweets'>
+      {% for tweet in tweets %}
+      <li>
+        <div class='row'>
+          <div class="col-md-12">
+            <div class="tweetbox">
+              <div class="tweetbox-img">
+                <img src="http://lorempixel.com/72/72?name={{ tweet.name }}" alt="People's Picture" class='img-rounded'>
+              </div>
+              <div class="tweetbox-text">
+                <h4><a href="/users/{{ tweet.name }}">{{ tweet.name}}</a>
+                </h4>
+                <p>{{ tweet.text }}</p>
+                <p class='text-right'><a href='/users/{{ tweet.name }}/tweets/{{ tweet.id }}'>#: {{ tweet.id }}</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
