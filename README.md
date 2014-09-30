@@ -1,6 +1,12 @@
 #Twitter.js
 A small version of twitter
 
+###Update
+* Added MySQL
+* Added NPM modules:
+  * mysql
+  * sequelize
+
 ###Technologies
 ####JavaScript
 * jQuery
@@ -33,6 +39,28 @@ A small version of twitter
 5. In index page, you can tweet. When you tweet, there will be a small alert saying "Tweet just added" in your browser while on the other user's browser, that new tweet will be displayed
 6. If you click at a user's name, you will be redirected to a page where it lists all of that user's tweets.  On this page, you can tweet as that user
 7. If you click at a tweet id, you will be redirected to a page where it lists that particular tweet
+
+##How to use - updated using MySQL
+1. Create Twitter Database in MySQL
+  a. Go to MySQL shell, by typing `$ mysql -u root`
+  b. Create the database by using
+    * ``mysql> CREATE DATABASE `twitterjs`;``
+      ``mysql> SHOW DATABASES;``
+      ``mysql> USE `twitterjs`;``
+2. Create the tables
+  a. ``mysql> CREATE TABLE `Tweets` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `UserId` int(11) DEFAULT NULL,
+  `tweet` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);``
+b. ``mysql> CREATE TABLE `Users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `pictureUrl` text,
+  PRIMARY KEY (`id`)
+);``
+3. Populate using seed.sql.  To use the Seed Data, run `mysql -u root "twitterjs" < seed.sql`;
 
 #####Some notes
 * Using express app generator
