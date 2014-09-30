@@ -57,13 +57,7 @@ A small version of twitter
       `tweet` varchar(255) DEFAULT NULL,
       PRIMARY KEY (`id`)
     );
-  ```
-  ```shell
-    mysql> CREATE DATABASE `twitterjs`;
-    mysql> SHOW DATABASES;
-    mysql> USE `twitterjs`;
-  ```
-  ```shell
+
     mysql> CREATE TABLE `Users` (
       `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
       `name` varchar(255) DEFAULT NULL,
