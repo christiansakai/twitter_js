@@ -51,20 +51,20 @@ A small version of twitter
   ```
 2. Create the tables
   ```shell
-  mysql> CREATE TABLE `Tweets` (
-    `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-    `UserId` int(11) DEFAULT NULL,
-    `tweet` varchar(255) DEFAULT NULL,
-    PRIMARY KEY (`id`)
-  );
+    mysql> CREATE TABLE `Tweets` (
+      `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+      `UserId` int(11) DEFAULT NULL,
+      `tweet` varchar(255) DEFAULT NULL,
+      PRIMARY KEY (`id`)
+    );
   ```
   ```shell
-  mysql> CREATE TABLE `Users` (
-    `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-    `name` varchar(255) DEFAULT NULL,
-    `pictureUrl` text,
-    PRIMARY KEY (`id`)
-  );
+    mysql> CREATE TABLE `Users` (
+      `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+      `name` varchar(255) DEFAULT NULL,
+      `pictureUrl` text,
+      PRIMARY KEY (`id`)
+    );
   ```
 3. Populate using seed.sql.  To use the Seed Data, run `mysql -u root "twitterjs" < seed.sql`;
 
