@@ -59,6 +59,11 @@ A small version of twitter
     );
   ```
   ```shell
+    mysql> CREATE DATABASE `twitterjs`;
+    mysql> SHOW DATABASES;
+    mysql> USE `twitterjs`;
+  ```
+  ```shell
     mysql> CREATE TABLE `Users` (
       `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
       `name` varchar(255) DEFAULT NULL,
