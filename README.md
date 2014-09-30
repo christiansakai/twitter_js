@@ -42,11 +42,13 @@ A small version of twitter
 
 ##How to use - updated using MySQL
 1. Create Twitter Database in MySQL
-  a. Go to MySQL shell, by typing `$ mysql -u root`
-  b. Create the database by using
-    * ``mysql> CREATE DATABASE `twitterjs`;``
-      ``mysql> SHOW DATABASES;``
-      ``mysql> USE `twitterjs`;``
+  * Go to MySQL shell, by typing `$ mysql -u root`
+  * Create the database by using
+  ```shell
+    mysql> CREATE DATABASE `twitterjs`;
+    mysql> SHOW DATABASES;
+    mysql> USE `twitterjs`;
+  ```
 2. Create the tables
   a. ``mysql> CREATE TABLE `Tweets` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
